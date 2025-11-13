@@ -1,0 +1,86 @@
+/* Global styles for Reliability Web App */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Custom utility classes */
+.text-monospace {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.badge-score {
+  font-size: 0.875rem;
+  padding: 0.35em 0.65em;
+}
+
+/* Result cards styling */
+.result-card {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.result-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Table enhancements */
+.table-comparison {
+  font-size: 0.95rem;
+}
+
+.table-comparison th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.table-comparison .row-winner {
+  background-color: #d4edda;
+}
+
+.table-comparison .row-second {
+  background-color: #fff3cd;
+}
+
+/* Loading state */
+.processing-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Pattern alerts */
+.pattern-alert {
+  border-left: 4px solid;
+  padding-left: 1rem;
+}
+
+.pattern-alert.alert-danger {
+  border-left-color: #dc3545;
+}
+
+.pattern-alert.alert-warning {
+  border-left-color: #ffc107;
+}
+
+.pattern-alert.alert-info {
+  border-left-color: #0dcaf0;
+}
