@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { postReliability } from '../lib/api'
+import { postReliability, postStep2 } from '../lib/api'
 
 export default function Step3(){
   const [mle, setMle] = useState(null)
@@ -111,7 +111,7 @@ export default function Step3(){
     payload.rr_method = rrMethod
     setLoading(true)
     try{
-      const res = await (await fetch((process.env.NEXT_PUBLIC_BACKEND_URL||process.env.NEXT_PUBLIC_API_URL||'http://localhost:5000') + '/api/step2',{ method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(payload)})).json()
+      const res = await postStep2(payload)
       if(res.error) throw new Error(res.error)
       localStorage.setItem('results_mle', JSON.stringify(res.results_mle || {}))
       localStorage.setItem('results_rr', JSON.stringify(res.results_rr || {}))

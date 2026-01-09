@@ -1,12 +1,5 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "package.json", "use": "@vercel/next" }
-  ],
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "https://your-backend.example.com/api/$1"
-    }
-  ]
+  "analytics": {
+    "disabled": false
+  }
 }
